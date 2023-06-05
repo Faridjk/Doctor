@@ -1,0 +1,171 @@
+.hero {
+  background-image: url(doctor.webp);
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  z-index: 2;
+  background-attachment: fixed;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 7, 7, 0.4), rgba(7, 7, 7, 0.5));
+  z-index: -1;
+}
+
+.kard {
+  height: 100%;
+}
+
+.hero1,
+.hero2,
+.hero3 {
+  position: relative;
+  background-image: url(surgeon1.jpg);
+  width: 100%;
+  height: 350px;
+  background-size: cover;
+  z-index: 2;
+}
+
+.hero2 {
+  background-image: url(surgeon2.jpg);
+  background-position: center;
+}
+
+.hero3 {
+  background-image: url(surgeon3.jpg);
+  background-position: center;
+}
+
+.kardtext {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  font-family: 'Oswald', sans-serif;
+}
+
+.overlay1 {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: linear-gradient(rgba(0, 7, 7, 0.4), rgba(94, 94, 94, 0.5));
+  z-index: -1;
+  border-radius: 35px;
+}
+
+.border1 {
+  border-top: 5px solid gray;
+}
+
+.border2 {
+  border-bottom: 4px solid red;
+}
+
+.box {
+  width: 50%;
+}
+
+hr {
+  color: white;
+}
+
+li:hover {
+  text-decoration: underline 4px white;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  background: white;
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+#elaqe,
+#haqqimda {
+  margin: 170px 0;
+}
+
+#treatment {
+  margin: 170px 0 70px;
+}
+
+nav {
+  font-family: 'Arvo', serif;
+  font-family: 'Mukta', sans-serif;
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .kardtext {
+    padding: 20px 10px;
+  }
+
+  .kardtext>h1 {
+    font-size: 34px;
+  }
+
+  #treatment,
+  #haqqimda {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .box {
+    width: 100%;
+  }
+}
