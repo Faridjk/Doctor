@@ -1,0 +1,2 @@
+# Doctor
+Global Page
